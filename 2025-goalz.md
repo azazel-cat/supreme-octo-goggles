@@ -1,0 +1,97 @@
+# 2025 Goals
+
+- outline process for engineering proposals
+  - GH wiki?
+  - repo?
+  - g docs?
+  - confluence?
+- test coverage
+  - https://github.com/simplecov-ruby/simplecov
+  - target >= 50%
+- documentation
+  - recommended practices for developing in tapjoyserver
+    - api contracts
+    - rails best practices
+  - document every class in the attribution component
+    - controllers
+      - attribution_api
+        - external
+          - [ ] TpatConnectController
+          - [ ] TpatConversion
+        - [ ] OfferCompletedController
+      - dashboard/tools
+        - [ ] TrackerPartnersController
+      - presenters
+        - [ ] ClickPresenter
+    - helpers
+      - [ ] AdRevenueHelper
+      - [ ] TpatHelper
+    - models
+      - attribution_api
+      - contracts
+      - event_ledger
+      - events
+      - offer_support
+      - tracker_partner
+      - [ ] CAReward (can we delete this?)
+      - [ ] TJCID
+      - [ ] TrackerPartner
+    - views/dashboard/tools/tracker_partners
+      - [ ] edit
+      - [ ] index
+- postback unification/cleanup
+  - [ ] audit all postback fields
+    - https://docs.google.com/spreadsheets/d/1YMd_Dm4JKrY6Co7AmODD7h6LimwTE4Y3-8iyMqQ3v58/edit?usp=sharing
+  - [ ] propose unified params and templates
+    - Can we get the templates into a single source-of-truth?
+  - [ ] update TpatConnect contract as needed
+  - [ ] get templates updated and verify
+    - https://confluence.unity3d.com/x/SJNJEw
+- click/oer deprecation work
+  - [ ] move Click out of ConversionTrackingJob
+    - remove or replace Click attributes:
+      - [ ] block_reason
+      - [ ] blocked_reward_key
+      - [ ] type
+      - [ ] monetary_tapjoy_amount
+      - [ ] rev_shares
+      - [ ] monetary_advertiser_amount
+      - [ ] monetary_predicted_amount
+      - [ ] dont_charge_adv_applied
+      - [ ] reward_key
+      - [ ] installed_at
+      - [ ] previously_installed
+      - [ ] force_convert
+      - [ ] force_converted_by
+      - [ ] blocked_reward_key
+  - [ ] move OfferEventReward out of ConversionTrackingJob
+    - remove or replace OfferEventReward attributes:
+      - [ ] monetary_tapjoy_amount
+      - [ ] monetary_advertiser_amount
+      - [ ] monetary_predicted_amount
+      - [ ] monetary_advertiser_amount
+      - [ ] dont_charge_adv_applied
+      - [ ] block_reason
+      - [ ] blocked_reward_key
+      - [ ] primary_block
+      - [ ] installed_at
+      - [ ] reward_amount
+      - [ ] monetary_publisher_amount
+      - [ ] monetary_gross_spend
+      - [ ] monetary_network_costs
+      - [ ] monetary_net_of_costs
+      - [ ] monetary_publisher_share
+      - [ ] monetary_displayer_amount
+      - [ ] monetary_tapjoy_deduction
+      - [ ] click_reward_key
+      - [ ] force_convert
+      - [ ] force_converted_by
+- audit attributes on models
+  - https://docs.google.com/spreadsheets/d/1fNRQ00tr1ZwVUizUNd8HTMj96CPJ8NkYdmRZbt6Itq0/edit?usp=sharing
+  - [ ] Click
+  - [ ] OfferEventReward
+  - [ ] ConversionAttempt
+  - [ ] Reward
+  - [ ] Conversion
+- relearn++ unity
+  - produce a playable demo of a remotely (i.e. not using direct input) navigable virtual environment by EOY
